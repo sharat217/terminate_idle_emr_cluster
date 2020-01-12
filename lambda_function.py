@@ -34,8 +34,8 @@ def getLastRunStepTime(cluster_id):
 
 def terminateCluster(cluster_id):
     print(f"terminating cluster {cluster_id}")
-    #response = client.terminate_job_flows(JobFlowIds=[cluster_id])
-    #print(response)
+    response = client.terminate_job_flows(JobFlowIds=[cluster_id])
+    print(response)
 
 def lambda_handler(event, context):
     response = client.list_clusters(
